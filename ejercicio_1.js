@@ -64,10 +64,11 @@ var productosAgotados = function(){
     aux = "";
     productos.forEach((element,index) => {
         if(element.stock==0){
-            aux = aux + element.tipo +" | ";
+            aux = aux + element.descripcion +" | ";
         }
     });
 
+    console.log(aux);
     return aux;
 }
 
@@ -103,13 +104,14 @@ var menu = function(){
             }
 
             let codigo = prompt(prods + "ingrese codigo: ");
-            let cantidad = promt("Ingrese cantidad vendida: ");
+            let cantidad = prompt("Ingrese cantidad vendida: ");
 
             registrarVenta(codigo,cantidad);
         }else if(op == 4){
-            
-        } 
-        else if(op == 6){
+            promedioVentas();
+        }else if(op == 5){
+            productosAgotados();
+        }else if(op == 6){
             adentro = false;
         }
     }
