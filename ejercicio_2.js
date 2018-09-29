@@ -21,8 +21,9 @@ class Conversor {
                 medida = medida - 273.15;
             }
         }
-
-        return medida;
+        var retornar = "";
+        retornar = medida + uniASer;
+        return retornar;
     }
 }
 
